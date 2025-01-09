@@ -139,7 +139,9 @@ class LaneDetection:
                 # 1.根据多项式系数，计算两个直线上的点，用于唯一确定这条直线
                 point_min = (np.min(x_coords), np.polyval(poly, np.min(x_coords)))
                 point_max = (np.max(x_coords), np.polyval(poly, np.max(x_coords)))
-                return np.array([point_min, point_max], dtype=np.int)
+                #return np.array([point_min, point_max], dtype=np.int)
+                return np.array([point_min, point_max], dtype=int)
+
             else:
                 pass
         else:
